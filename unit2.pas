@@ -1,11 +1,18 @@
-unit Unit2;
+﻿unit Unit2;
 
+{$IFDEF FPC}
 {$mode objfpc}{$H+}
+{$ENDIF}
 
 interface
 
 uses
-  Classes, SysUtils, Forms, Controls, ExtCtrls, StdCtrls, Dialogs, LCLType;
+  {$IFDEF FPC}
+  LCLType,
+  {$ELSE}
+  WinAPI.Windows, Vcl.Imaging.pngimage,
+  {$ENDIF}
+  Classes, SysUtils, Forms, Controls, ExtCtrls, StdCtrls, Dialogs;
 
 type
 
@@ -39,7 +46,11 @@ type
 
 implementation
 
+{$IFDEF FPC}
 {$R *.lfm}
+{$ELSE}
+{$R *.dfm}
+{$ENDIF}
 
 { TFramePadrao }
 

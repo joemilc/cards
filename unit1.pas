@@ -1,6 +1,8 @@
-unit Unit1;
+﻿unit Unit1;
 
+{$IFDEF FPC}
 {$mode objfpc}{$H+}
+{$ENDIF}
 
 interface
 
@@ -29,7 +31,11 @@ var
 
 implementation
 
+{$IFDEF FPC}
 {$R *.lfm}
+{$ELSE}
+{$R *.dfm}
+{$ENDIF}
 
 { TForm1 }
 
