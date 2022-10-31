@@ -1,0 +1,39 @@
+object Form1: TForm1
+  Left = 318
+  Height = 618
+  Top = 160
+  Width = 1275
+  Caption = 'Form1'
+  ClientHeight = 618
+  ClientWidth = 1275
+  Color = clWhite
+  LCLVersion = '2.0.12.0'
+  object ScrollBox1: TScrollBox
+    Left = 128
+    Height = 592
+    Top = 8
+    Width = 1136
+    HorzScrollBar.Page = 1
+    VertScrollBar.Page = 1
+    Anchors = [akTop, akLeft, akRight]
+    TabOrder = 0
+  end
+  object Button1: TButton
+    Left = 18
+    Height = 25
+    Top = 23
+    Width = 75
+    Caption = 'Button1'
+    OnClick = Button1Click
+    TabOrder = 1
+  end
+  object Button2: TButton
+    Left = 19
+    Height = 25
+    Top = 63
+    Width = 75
+    Caption = 'Button2'
+    OnClick = Button2Click
+    TabOrder = 2
+  end
+end
